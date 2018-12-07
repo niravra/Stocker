@@ -1,0 +1,96 @@
+<script>
+
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.fillStyle = "#92B901";
+  ctx.fillRect(50, 50, 100, 100);
+
+</script>
+<div class="bline">
+    <div class="spacing-2">
+        <div class="input-group input-group-unstyled">
+          <!-- <input type="text" class="form-control" /> -->
+        <input type="text" [(ngModel)]="search" class="form-control" placeholder="Search for Company"/>
+          <button type="submit" (click)="searchStock()"><i class="fa fa-search"></i></button>
+          </div>
+    </div>
+
+</div>
+<!--<p>-->
+  <!--GRAPH!-->
+<!--</p>-->
+<p class="h">{{errorMsg}}</p>
+
+
+<div>
+
+
+
+  <h3 style="text-align: center">Your Current Portfolio value is  ${{priceChange}}</h3>
+
+
+<!--<table id = "dt" border="2px">-->
+  <!--<thead>-->
+  <!--<th>Stock Name</th>-->
+  <!--<th>Stock Price</th>-->
+  <!--<th>Stock Quantity</th>-->
+  <!--</thead>-->
+  <!--<tr *ngFor="let stock of portfolio">-->
+    <!--<td>{{stock.stockname}}</td>-->
+    <!--<td>{{stock.stockprice}}</td>-->
+    <!--<td>{{stock.quantity}}</td>-->
+  <!--</tr>-->
+<!--</table>-->
+
+  <table class="table table-bordered" [mfData]="ngtabledata" #mf="mfDataTable" [mfRowsOnPage]="10" (mfSelectedEntities)="setSelectedEntities($event)">
+    <thead>
+      <tr>
+        <th>
+          <mfRowSelectorHead></mfRowSelectorHead>
+        </th>
+          <th style="width: 33%">
+            <mfDefaultSorter by="name" [mfShowSortableArrows]="true">Name</mfDefaultSorter>
+          </th>
+        <th style="width: 33%">
+          <mfDefaultSorter by="price">Price</mfDefaultSorter>
+        </th>
+        <th style="width: 33%">
+          <mfDefaultSorter by="quantity">Quantity</mfDefaultSorter>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of mf.data">
+        <!--<td><mfRowSelector [entity]="item"></mfRowSelector></td>-->
+        <td><mfRowSelector [entity]="item" [checkboxId]="ndx"></mfRowSelector></td>
+        <td>{{item.stockname}}</td>
+        <td>{{item.stockprice}}</td>
+        <td>{{item.quantity}}</td>
+        <td><button class="btn btn-danger" (click)="deleteStocks(item)">Sell</button></td>
+      </tr>
+    </tbody>
+    <!--<tfoot>-->
+  <!--<tr>-->
+    <!--&lt;!&ndash;<td colspan="4">&ndash;&gt;-->
+      <!--&lt;!&ndash;<mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>&ndash;&gt;-->
+    <!--&lt;!&ndash;</td>&ndash;&gt;-->
+  <!--</tr>-->
+  <!--</tfoot>-->
+  </table>
+
+
+
+
+
+  {{symbolArray[0]}}
+  <canvas id="myCanvas" width="150" height="100" id = '{{0}}canvas' >{{ chartArray[0] }}</canvas>
+  {{symbolArray[1]}}
+  <canvas width="150" height="100"  id = '{{1}}canvas' >{{ chartArray[1] }}</canvas>
+  {{symbolArray[2]}}
+  <canvas width="150" height="100"  id = '{{2}}canvas' >{{ chartArray[2] }}</canvas>
+  {{symbolArray[3]}}
+  <canvas width="150" height="100" id = '{{3}}canvas' >{{ chartArray[3] }}</canvas>
+
+</div>

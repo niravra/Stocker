@@ -1,0 +1,168 @@
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>NEWS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <div class="container">
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+      <button class="w3-button w3-white w3-padding-large w3-hover-black"><a routerLink="/login" routerLinkActive="active">Login</a></button>
+      <button class="w3-button w3-white w3-padding-large w3-hover-black"><a routerLink="/register" routerLinkActive="active">Register</a></button>
+  <br><br><h1 class="w3-jumbo"><span class="w3-hide-small"></span>Stocker</h1>
+    <!-- <img src="/w3images/man_smoke.jpg" alt="boy" class="w3-image" width="992" height="1108"> -->
+    <br><br>
+    <h3>Your one stop solution for Stocks and Digital Currencies</h3>
+  </header>
+<!-- 
+  <div class="spacing">
+    <img src="assets/images/Mystock.gif" height="350" width="400"/>
+      </div> -->
+     
+  <!-- About Section -->
+    <!-- <br><br><br><br><br><br><br> -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">ABOUT</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>BrightBox lets you learn to invest in the stock market.
+        We believe that the financial system should help the rest of us, not just the wealthy.
+        We’ve cut the fat that makes other brokerages costly, like manual account management and hundreds of storefront locations, so we can offer zero commission trading.
+    </p>
+<!--  ---------------------------------------------------------------------->
+    </div>
+<!-- New Feeds-->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="photos">
+      <h2 class="w3-text-light-grey">STOCK NEWS</h2>
+      <hr style="width:200px" class="w3-opacity">
+
+      <!--<div id="myNews" class="carousel slide" data-ride="carousel">-->
+        <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+        <!--<ol class="carousel-indicators">-->
+          <!--<li data-target="#myNews" data-slide-to="0" class="active"></li>-->
+          <!--<li data-target="#myNews" data-slide-to="1"></li>-->
+          <!--<li data-target="#myNews" data-slide-to="2"></li>-->
+
+        <!--</ol>-->
+
+        <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+        <!--<div class="carousel-inner">-->
+          <!--&lt;!&ndash; <div *ngFor="let news of newsDisplayArr">-->
+
+              <!--<div class="item item1">-->
+               <!--<p>{{news.title}}</p>-->
+               <!--<a>{{news.url}}</a>-->
+               <!--<img src={{news.urlToImage}}>-->
+                 <!--</div> &ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="item item1 active">&ndash;&gt;-->
+            <!--&lt;!&ndash;<p><b>20% of Financial Institutions Could Begin Crypto Trading in 2018: Survey!</b></p>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="https://www.ccn.com/bitcoin-fever-spreads-to-financial-institutions-survey/">https://www.ccn.com/bitcoin-fever-spreads-to-financial-institutions-survey/</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+          <!--&lt;!&ndash;<div class="item item1">&ndash;&gt;-->
+            <!--&lt;!&ndash;<p><b>Bitcoin Is Bigger Than the Internet': Billionaire Investor Tim Draper</b></p>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="https://www.ccn.com/bitcoin-is-bigger-than-the-internet-draper/">https://www.ccn.com/bitcoin-is-bigger-than-the-internet-draper/</a></div>&ndash;&gt;-->
+
+          <!--&lt;!&ndash;<div class="item item1">&ndash;&gt;-->
+            <!--&lt;!&ndash;<p><b>Swiss Post Taps Modum Blockchain to Monitor Temperatures of Shipments</b></p>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="https://www.ccn.com/swiss-post-taps-modum-blockchain-for-temperature-monitoring-of-shipments/">https://www.ccn.com/swiss-post-taps-modum-blockchain-for-temperature-monitoring-of-shipments/</a></div>&ndash;&gt;-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+
+      <!-- Left and right controls -->
+      <!--<a class="left carousel-control" href="#myNews" data-slide="prev">-->
+        <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+        <!--<span class="sr-only">Previous</span>-->
+      <!--</a>-->
+      <!--<a class="right carousel-control" href="#myNews" data-slide="next">-->
+        <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+        <!--<span class="sr-only">Next</span>-->
+      <!--</a>-->
+
+    </div>
+  </div>
+<!------------------------------------- -->
+
+<div class="w3-row-padding">
+
+     <div *ngFor="let news of newsDisplayArr">
+      <div class="w3-third w3-section">
+ 
+    <div class="w3-card-4">
+  <img src="{{news.urlToImage}}" style="width:100%">
+  <div class="w3-container w3-white">
+  <h4>{{news.title}}</h4>
+  <a>{{news.url}}</a>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- <div *ngFor="let news of newsDisplayArr">
+        <div class="w3">
+      <img src={{news.urlToImage}} height="400" width="400">
+       
+        <a>{{news.url}}</a> 
+    </div>
+</div> -->
+<!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Boston, US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    </div><br>
+
+  </div>
+
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <!-- <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>

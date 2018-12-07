@@ -1,0 +1,79 @@
+
+<body class="w3-black">
+
+<nav class="navbar transparent navbar-fixed-top">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="pull-left col-sm-5" style="padding-left: 20px; color: red; padding-top: 10px">
+        <h3>
+          <span id="brandLogo">Stocker</span>
+
+        </h3>
+      </div>
+      <div class="pull-left col-sm-2" style="padding-top: 15px">
+
+        Stock Details : {{stockName}}
+
+      </div>
+      <div class="pull-left col-sm-3" style="padding-top: 15px; color: green" *ngIf="stockupdatedvalue==1">
+
+          Stock Successfully Added
+
+      </div>
+      <div ng-show="model.user.loggedStatus === 'true'" class="col-sm-2 pull-right" style="padding-top: 15px">
+
+        <div class="dropdown">
+          <span class="glyphicon glyphicon-user whitecolor" style="font-size: 20px"></span>
+          <!--<span class="glyphicon glyphicon-menu-down whitecolor"></span>-->
+
+
+          <a href="#"><span class="dropdown-font">Log Out</span></a>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<ngForm>
+  <div class="spacing-1">
+    {{stockName}}
+  </div>
+
+
+  <div id="canvasholder" style="margin: 5%" >
+    <!--<div  *ngIf="chart && chartReady==true; else loaderbutton">-->
+    <div  *ngIf="chart;else loaderbutton" [hidden]="chartReady==false" >
+      <canvas id = 'canvas' >{{ chart }}</canvas>
+    </div>
+
+    <div id="loaderbutton"[hidden]="chartReady==true" class="loader"></div>
+
+  </div>
+
+  <!--</div>-->
+  <span>
+    <button class="w3-button w3-white w3-padding-large w3-hover-black" type="button" (click)="intradayStockData()">Intraday</button>
+    </span>
+  <span>
+    <button class="w3-button w3-white w3-padding-large w3-hover-black" type="button" (click)="dailyStockData()">Daily</button>
+    </span>
+  <span>
+    <button class="w3-button w3-white w3-padding-large w3-hover-black" type="button" (click)="weeklyStockData()">Weekly</button>
+    </span>
+  <span>
+    <button class="w3-button w3-white w3-padding-large w3-hover-black" type="button" (click)="monthlyStockData()">Monthly</button>
+    </span>
+  <div class="spacing-3">
+<span>
+    <input type="number" class="form-control" (input)="quantity= $event.target.value" placeholder="Quantity">
+<button class="w3-button w3-white w3-padding-large w3-hover-black" type="button" (click)="updatethestockdata(quantity)"> Add Stock</button>
+</span>
+  </div>
+  <button class="w3-button w3-white w3-padding-large w3-hover-black" type="button"><a routerLink="/dashboard">Back</a></button>
+</ngForm>
+</body>
+
+

@@ -1,0 +1,121 @@
+<body class="w3-black">
+
+
+<!-- Grid for pricing tables -->
+
+<nav class="navbar transparent navbar-fixed-top">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="pull-left col-sm-5" style="padding-left: 20px; color: red; padding-top: 10px">
+        <h3>
+          <span id="brandLogo">Stocker</span>
+
+        </h3>
+      </div>
+      <div class="pull-left col-sm-2" style="padding-top: 15px">
+
+        Welcome {{user.firstName}}
+
+      </div>
+      <div class="pull-left col-sm-3" style="padding-top: 15px">
+
+        Your Dashboard
+
+      </div>
+      <div ng-show="model.user.loggedStatus === 'true'" class="col-sm-2 pull-right" style="padding-top: 15px">
+
+        <div class="dropdown">
+          <span class="glyphicon glyphicon-user whitecolor" style="font-size: 20px"></span>
+          <!--<span class="glyphicon glyphicon-menu-down whitecolor"></span>-->
+
+
+          <a href="#"><span class="dropdown-font">Log Out</span></a>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- Grid for pricing tables -->
+
+
+
+
+
+
+
+
+<!--------------------->
+<!--<h3 class="w3-padding-16 w3-text-light-grey">Hello! {{user.firstName}} Your Dashboard</h3>-->
+
+<div class="wrap-containersize" style="padding-top: 100px;">
+sdssd
+
+</div>
+
+
+
+
+
+
+<div class="wrap-container">
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+        All Users
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<table class="table table-striped" [mfData]="ngtabledata" #mf="mfDataTable">
+  <thead>
+  <tr>
+    <th style="width: 33%">
+      First Name
+    </th>
+    <th style="width: 33%">
+      Last Name
+    </th>
+    <th style="width: 33%">
+      Date Created
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of mf.data.rows">
+
+    <td>{{item.firstName}}</td>
+    <td>{{item.lastName}}</td>
+    <!--<td>{{item.dateCreated}}</td>-->
+
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+  <!--<td colspan="4">-->
+  <!--<mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>-->
+  <!--</td>-->
+  </tr>
+  </tfoot>
+</table>
+
+
+<!--------------------->
+<!--<h3 class="w3-padding-16 w3-text-light-grey">Hello! {{user.firstName}} Your Dashboard</h3>-->
+
+
+
+
+
+</body>
+<!--<app-stock-api></app-stock-api>-->

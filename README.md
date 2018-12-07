@@ -21,6 +21,7 @@ Stocker is a MEAN Stack Application which enables the user to purchase/sell stoc
 
 ## The Project is divided into two parts - 
   **Frontend**
+  
   **Backend**
 
 **Installation process required to run the project:**
